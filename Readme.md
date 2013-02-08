@@ -14,5 +14,5 @@ bundle exec rake casino_core:db:schema:load
 
 Create a cronjob:
 ```cron
-*\5 * * * * RAILS_ENV=production bundle exec rake casino_core:cleanup:all
+*\5 * * * * RAILS_ENV=production bundle exec rake casino_core:cleanup:all > /dev/null
 ```
