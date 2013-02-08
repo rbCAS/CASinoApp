@@ -7,6 +7,7 @@ Ready to use CAS server.
 
 ```shell
 gem install bundler
+cd /path/to/CASinoApp
 bundle install --deployment --without development test
 export RAILS_ENV=production
 bundle exec rake casino_core:db:schema:load
