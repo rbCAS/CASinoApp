@@ -12,4 +12,5 @@ gem 'jquery-rails'
 
 gem 'sqlite3'
 gem 'casino'
+gem 'casino_core-authenticator-ldap'
 
