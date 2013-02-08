@@ -1,0 +1,14 @@
+production:
+  <<: *defaults
+  authenticators:
+    my_company_ldap:
+      authenticator: "ldap"
+      options:
+        host: "localhost"
+        port: 12445
+        base: "dc=users,dc=example.com"
+        username_attribute: "uid"
+        encryption: "simple_tls"
+        extra_attributes:
+          email: "mail"
+          fullname: "displayname"
