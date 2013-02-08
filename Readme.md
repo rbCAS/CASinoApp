@@ -18,5 +18,5 @@ Configure your backends in ```config/cas.yml```. Check the [the wiki](https://gi
 
 Create a cronjob:
 ```cron
-*\5 * * * * cd /path/to/CASinoApp && RAILS_ENV=production bundle exec rake casino_core:cleanup:all > /dev/null
+*/5 * * * * cd /path/to/CASinoApp && RAILS_ENV=production bundle exec rake casino_core:cleanup:all > /dev/null
 ```
