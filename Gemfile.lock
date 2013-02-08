@@ -40,7 +40,7 @@ GEM
       addressable (~> 2.3)
       terminal-table (~> 1.4)
       useragent (~> 0.4)
-    casino_core-authenticator-ldap (0.0.2)
+    casino_core-authenticator-ldap (0.0.3)
       casino_core (~> 1.0)
       net-ldap (~> 0.3)
     coffee-rails (3.2.2)
