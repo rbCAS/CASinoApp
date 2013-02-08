@@ -7,5 +7,12 @@ Ready to use CAS server.
 
 ```shell
 gem install bundler
-./bin/bundle install --deployment --without development test
+bundle install --deployment --without development test
+export RAILS_ENV=production
+bundle exec rake casino_core:db:schema:load
+```
+
+Create a cronjob:
+```cron
+*\5 * * * * RAILS_ENV=production bundle exec rake casino_core:cleanup:all
 ```
