@@ -1,14 +1,16 @@
 production:
-  <<: *defaults
+  frontend:
+    sso_name: 'CASino'
+    footer_text: 'Powered by <a href="http://rbcas.com/">CASino</a>'
   authenticators:
     my_company_ldap:
-      authenticator: "LDAP"
+      authenticator: 'LDAP'
       options:
-        host: "localhost"
+        host: 'localhost'
         port: 636
-        base: "ou=people,dc=example,dc=com"
-        username_attribute: "uid"
-        encryption: "simple_tls"
+        base: 'ou=people,dc=example,dc=com'
+        username_attribute: 'uid'
+        encryption: 'simple_tls'
         extra_attributes:
-          email: "mail"
-          fullname: "displayname"
+          email: 'mail'
+          fullname: 'displayname'
