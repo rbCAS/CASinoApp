@@ -12,6 +12,7 @@ bundle install --deployment --without development test
 export RAILS_ENV=production
 bundle exec rake casino_core:db:schema:load
 cp config/cas.yml.example config/cas.yml
+bundle exec rake assets:precompile
 ```
 
 Configure your backends in ```config/cas.yml```. Check the [the wiki](https://github.com/rbCAS/CASino/wiki/Configuration) for examples.
