@@ -17,3 +17,9 @@ Create a cronjob:
 ```cron
 */5 * * * * cd /path/to/CASinoApp && RAILS_ENV=production bundle exec rake casino_core:cleanup:all > /dev/null
 ```
+
+## Update
+
+```shell
+./script/update
+```

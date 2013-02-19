@@ -4,8 +4,7 @@ export RAILS_ENV=production
 
 bundle install --deployment --without development test
 
-bundle exec rake casino_core:db:schema:load
-
-cp config/cas.yml.example config/cas.yml
+bundle exec rake casino_core:db:migrate
 
 bundle exec rake assets:precompile
+
