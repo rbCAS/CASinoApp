@@ -14,7 +14,7 @@ bundle install --deployment --without development test $without
 
 bundle exec rake casino_core:db:schema:load
 
-cp config/database.yml.example.$1 config/database.yml
-cp config/cas.yml.example config/cas.yml
+cp -v config/database.yml.example.$1 config/database.yml
+cp -v config/cas.yml.example config/cas.yml
 
 bundle exec rake assets:precompile
