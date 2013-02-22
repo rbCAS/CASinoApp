@@ -15,6 +15,7 @@ cd /path/to/CASinoApp
 ```
 
 Configure your database in ```config/database.yml```.
+
 Configure your backends in ```config/cas.yml```. Check the [the wiki](https://github.com/rbCAS/CASino/wiki/Configuration) for examples.
 
 Create a cronjob:
