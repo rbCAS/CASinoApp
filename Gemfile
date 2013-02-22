@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -11,7 +11,18 @@ end
 
 gem 'jquery-rails'
 
-gem 'sqlite3'
 gem 'casino'
 gem 'casino_core-authenticator-ldap'
+gem 'casino_core-authenticator-activerecord'
 
+group :sqlite do
+  gem 'sqlite3'
+end
+
+group :mysql do
+  gem 'mysql2'
+end
+
+group :postgresql do
+  gem 'pg'
+end
