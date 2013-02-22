@@ -13,9 +13,12 @@ export RAILS_ENV=production
 bundle install --deployment --without development test $without
 
 cp -v config/database.yml.example.$1 config/database.yml
-
-bundle exec rake casino_core:db:schema:load
-
 cp -v config/cas.yml.example config/cas.yml
 
+if [ "$1" != 'sqlite' ]; then
+  echo 'Please configure your database in config/database.yml and hit ENTER when I should continue...'
+  read
+fi
+
+bundle exec rake casino_core:db:schema:load
 bundle exec rake assets:precompile
