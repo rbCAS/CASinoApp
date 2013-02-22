@@ -3,14 +3,37 @@ production:
     sso_name: 'CASino'
     footer_text: 'Powered by <a href="http://rbcas.com/">CASino</a>'
   authenticators:
-    my_company_ldap:
-      authenticator: 'LDAP'
-      options:
-        host: 'localhost'
-        port: 636
-        base: 'ou=people,dc=example,dc=com'
-        username_attribute: 'uid'
-        encryption: 'simple_tls'
-        extra_attributes:
-          email: 'mail'
-          fullname: 'displayname'
+
+########################################
+# LDAP
+########################################
+#    my_company_ldap:
+#      authenticator: 'LDAP'
+#      options:
+#        host: 'localhost'
+#        port: 636
+#        base: 'ou=people,dc=example,dc=com'
+#        username_attribute: 'uid'
+#        encryption: 'simple_tls'
+#        extra_attributes:
+#          email: 'mail'
+#          fullname: 'displayname'
+
+########################################
+# SQL (ActiveRecord authenticator)
+########################################
+#    my_funny_sql_database:
+#      authenticator: "ActiveRecord"
+#      options:
+#        connection:
+#          adapter: "mysql"
+#          host: "localhost"
+#          username: "casino"
+#          password: "secret"
+#          database: "users"
+#        table: "users"
+#        username_column: "username"
+#        password_column: "password"
+#        extra_attributes:
+#          email: "email_database_column"
+#          fullname: "displayname_database_column"
