@@ -1,0 +1,7 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: Moviez_production
+  pool: 5
+  username: Moviez
+  password:
