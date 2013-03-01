@@ -1,0 +1,7 @@
+hosts:
+    web: sso.example.com
+    app: sso.example.com
+    db: sso.example.com
+  repository: http://github.com/rbCAS/CASinoApp.git
+  user: deploy
+  deploy_to: /var/www/apps/CASinoApp

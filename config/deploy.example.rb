@@ -1,5 +1,5 @@
 
-config = YAML.load_file('config/app-config.yml') || {}
+config = YAML.load_file('config/deployment-config.yml') || {}
 
 
 set :application, 'CASinoApp'
