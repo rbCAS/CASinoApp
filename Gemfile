@@ -22,3 +22,8 @@ end
 group :postgresql do
   gem 'pg'
 end
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano_database_yml'
+end
