@@ -4,4 +4,19 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-CASinoApp::Application.config.secret_token = '0c6c0cc68f79adab09ac46e2c463ff2852851f60dec40cbffb813c079ea80a246e5525cad36a11fd5b50c9ef5c14e72f92f2e6c45a0ec4281da16446647351ca'
+
+if ENV['SECRET_TOKEN'].present?
+  CASinoApp::Application.config.secret_token = ENV['SECRET_TOKEN']
+elsif ENV['RAILS_GROUPS'] != 'assets'
+  raise <<-ERROR
+
+  You must generate a unique secret token for your CASinoApp.
+
+  If you are deploying via capistrano, please ensure that your `config/deploy.rb` contains
+  the `casinoapp:setup_configs` and `errbit:symlink_configs` tasks from `config/deploy.example.rb`.
+  Next time you deploy, your secret token will be automatically generated.
+
+  If you are deploying to Heroku, please run the following command to set your secret token:
+  heroku config:add SECRET_TOKEN="$(bundle exec rake secret)"
+  ERROR
+end
