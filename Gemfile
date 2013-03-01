@@ -15,10 +15,6 @@ gem 'casino'
 gem 'casino_core-authenticator-ldap'
 gem 'casino_core-authenticator-activerecord'
 
-group :sqlite do
-  gem 'sqlite3'
-end
-
 group :mysql do
   gem 'mysql2'
 end
