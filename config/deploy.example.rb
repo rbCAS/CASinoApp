@@ -1,10 +1,10 @@
+require 'bundler/capistrano'
 set :whenever_command, 'bundle exec whenever'
 require 'whenever/capistrano'
 
 config = YAML.load_file('config/deployment-config.yml') || {}
 
 require 'database_yml/capistrano'
-require 'bundler/capistrano'
 
 
 
