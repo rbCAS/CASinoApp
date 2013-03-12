@@ -1,7 +1,7 @@
 production:
   adapter: postgresql
   encoding: unicode
-  database: Moviez_production
+  database: CASinoApp
   pool: 5
-  username: Moviez
+  username: CASinoApp
   password:
