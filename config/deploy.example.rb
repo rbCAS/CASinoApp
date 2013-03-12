@@ -3,6 +3,8 @@ require 'whenever/capistrano'
 
 config = YAML.load_file('config/deployment-config.yml') || {}
 
+require 'database_yml/capistrano'
+
 
 set :application, 'CASinoApp'
 set :repository,  config['repository']
