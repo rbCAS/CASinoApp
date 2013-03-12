@@ -26,6 +26,22 @@ set :ssh_options, { :forward_agent => true }
 set :deploy_to, config['deploy_to']
 set :deploy_via, :remote_cache
 
+
+desc 'Deploy database.yml file'
+task :deploy_database_yml, :roles => :app do
+  template = File.read('config/deploy/database.yml')
+  put template, "#{shared_path}/database.yml"
+end
+after 'deploy:setup', :deploy_database_yml
+
+desc 'Deploy cas.yml file'
+task :deploy_cas_yml, :roles => :app do
+  template = File.read('config/deploy/cas.yml')
+  put template, "#{shared_path}/cas.yml"
+end
+after 'deploy:setup', :deploy_cas_yml
+
+
 after "deploy:restart", "deploy:cleanup"
 
 namespace :deploy do
