@@ -19,3 +19,6 @@
 
 /vendor/bundle
 /public/assets
+
+/config/deployment-config.yml
+/config/deploy.rb
