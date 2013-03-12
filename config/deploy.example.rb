@@ -4,6 +4,8 @@ require 'whenever/capistrano'
 config = YAML.load_file('config/deployment-config.yml') || {}
 
 require 'database_yml/capistrano'
+require 'bundler/capistrano'
+
 
 
 set :application, 'CASinoApp'
@@ -34,7 +36,7 @@ namespace :deploy do
   end
 end
 
-before 'deploy:assets:symlink', 'casinoapp:symlink_config'
+before 'deploy:assets:symlink', 'casinoapp:symlink_configs'
 
 namespace :casinoapp do
   task :setup_config do
