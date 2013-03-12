@@ -4,9 +4,6 @@ require 'whenever/capistrano'
 
 config = YAML.load_file('config/deployment-config.yml') || {}
 
-require 'database_yml/capistrano'
-
-
 
 set :application, 'CASinoApp'
 set :repository,  config['repository']
@@ -59,7 +56,6 @@ namespace :casinoapp do
     shared_config_path = File.join(shared_path,'config')
 
     run "mkdir -p #{shared_config_path}"
-    run "if [ ! -f #{shared_config_path}/cas.yml ]; then cp #{latest_release}/config/cas.yml.example #{shared_config_path}/cas.yml; fi"
 
     run %Q{if [ ! -f #{shared_config_path}/secret_token.rb ]; then
       cd #{current_release};
