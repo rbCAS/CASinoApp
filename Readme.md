@@ -5,7 +5,8 @@ Ready to use CAS server.
 
 ## Setup
 
-Replace ```<database_type>``` with one of ```postgresql``` or ```mysql```.
+Replace ```<database_type>``` with one of ```sqlite```, ```postgresql``` or ```mysql```.
+The easiest to start off is ```sqlite```.
 
 ```shell
 gem install bundler
