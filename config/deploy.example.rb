@@ -1,3 +1,5 @@
+set :whenever_command, 'bundle exec whenever'
+require 'whenever/capistrano'
 
 config = YAML.load_file('config/deployment-config.yml') || {}
 

@@ -15,6 +15,8 @@ gem 'casino'
 gem 'casino_core-authenticator-ldap'
 gem 'casino_core-authenticator-activerecord'
 
+gem 'whenever', :require => false
+
 group :mysql do
   gem 'mysql2'
 end
