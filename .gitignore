@@ -22,3 +22,5 @@
 
 /config/deployment-config.yml
 /config/deploy.rb
+/config/deploy/cas.yml
+/config/deploy/database.yml
