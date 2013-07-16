@@ -30,7 +30,7 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.5)
     arel (3.0.2)
-    bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.1.1)
     builder (3.0.4)
     capistrano (2.15.4)
       highline
@@ -50,7 +50,7 @@ GEM
       rotp (~> 1.4)
       terminal-table (~> 1.4)
       useragent (~> 0.4)
-    casino_core-authenticator-activerecord (1.1.4)
+    casino_core-authenticator-activerecord (1.1.6)
       activerecord (~> 3.2.12)
       bcrypt-ruby (~> 3.0)
       unix-crypt (~> 1.1)
