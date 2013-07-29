@@ -11,7 +11,8 @@ end
 
 gem 'jquery-rails'
 
-gem 'casino'
+gem 'casino_core', github:'dlindahl/CASinoCore', branch:'feature/move_persistance_to_casino'
+gem 'casino',      github:'dlindahl/CASino',     branch:'issues/casino_core/12/persistance'
 gem 'casino_core-authenticator-ldap'
 gem 'casino_core-authenticator-activerecord'
 
