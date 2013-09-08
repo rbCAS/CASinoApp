@@ -25,7 +25,7 @@ group :mysql do
   gem 'mysql2'
 end
 
-group :postgresql do
+group :postgres do
   gem 'pg'
 end
 
