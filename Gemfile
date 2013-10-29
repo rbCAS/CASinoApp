@@ -9,11 +9,9 @@ group :assets do
   gem 'therubyracer'
 end
 
-gem 'jquery-rails'
-
 gem 'casino'
-gem 'casino_core-authenticator-ldap'
-gem 'casino_core-authenticator-activerecord'
+gem 'casino-ldap_authenticator'
+gem 'casino-activerecord_authenticator'
 
 gem 'whenever', :require => false
 
