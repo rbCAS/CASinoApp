@@ -36,7 +36,7 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 0.0.23)
-    casino (2.0.0)
+    casino (2.0.1)
       addressable (~> 2.3)
       faraday (~> 0.8)
       http_accept_language (~> 2.0.0.pre)
