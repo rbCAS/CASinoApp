@@ -22,7 +22,7 @@ production:
 ########################################
 # SQL (ActiveRecord authenticator)
 ########################################
-#    my_funny_sql_database:
+#    my_company_sql_database:
 #      authenticator: "ActiveRecord"
 #      options:
 #        connection:
