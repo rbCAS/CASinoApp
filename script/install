@@ -20,5 +20,5 @@ if [ "$1" != 'sqlite' ]; then
   read
 fi
 
-bundle exec rake casino_core:db:schema:load
+bundle exec rake db:schema:load
 bundle exec rake assets:precompile
