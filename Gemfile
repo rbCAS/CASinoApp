@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1'
+gem 'unicorn'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.3'
@@ -29,4 +30,5 @@ end
 
 group :development do
   gem 'capistrano', '~> 2.15'
+  gem 'foreman'
 end
