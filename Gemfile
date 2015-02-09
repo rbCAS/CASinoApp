@@ -14,6 +14,8 @@ gem 'casino', '4.0.0.pre.1'
 gem 'casino-ldap_authenticator', '3.0.0.pre.1'
 gem 'casino-activerecord_authenticator', '4.0.0.pre.1'
 
+gem 'http_accept_language', '~> 2.0'
+
 gem 'whenever', :require => false
 
 group :sqlite do
