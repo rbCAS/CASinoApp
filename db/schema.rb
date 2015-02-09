@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827184143) do
+ActiveRecord::Schema.define(version: 20150209184353) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "casino_auth_token_tickets", force: true do |t|
+    t.string   "ticket",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "casino_auth_token_tickets", ["ticket"], name: "index_casino_auth_token_tickets_on_ticket", unique: true, using: :btree
 
   create_table "casino_login_tickets", force: true do |t|
     t.string   "ticket",     null: false
@@ -19,7 +30,7 @@ ActiveRecord::Schema.define(version: 20140827184143) do
     t.datetime "updated_at"
   end
 
-  add_index "casino_login_tickets", ["ticket"], name: "index_casino_login_tickets_on_ticket", unique: true
+  add_index "casino_login_tickets", ["ticket"], name: "index_casino_login_tickets_on_ticket", unique: true, using: :btree
 
   create_table "casino_proxy_granting_tickets", force: true do |t|
     t.string   "ticket",       null: false
@@ -31,10 +42,10 @@ ActiveRecord::Schema.define(version: 20140827184143) do
     t.datetime "updated_at"
   end
 
-  add_index "casino_proxy_granting_tickets", ["granter_type", "granter_id"], name: "index_casino_proxy_granting_tickets_on_granter", unique: true
-  add_index "casino_proxy_granting_tickets", ["granter_type", "granter_id"], name: "index_proxy_granting_tickets_on_granter", unique: true
-  add_index "casino_proxy_granting_tickets", ["iou"], name: "index_casino_proxy_granting_tickets_on_iou", unique: true
-  add_index "casino_proxy_granting_tickets", ["ticket"], name: "index_casino_proxy_granting_tickets_on_ticket", unique: true
+  add_index "casino_proxy_granting_tickets", ["granter_type", "granter_id"], name: "index_casino_proxy_granting_tickets_on_granter", unique: true, using: :btree
+  add_index "casino_proxy_granting_tickets", ["granter_type", "granter_id"], name: "index_proxy_granting_tickets_on_granter", unique: true, using: :btree
+  add_index "casino_proxy_granting_tickets", ["iou"], name: "index_casino_proxy_granting_tickets_on_iou", unique: true, using: :btree
+  add_index "casino_proxy_granting_tickets", ["ticket"], name: "index_casino_proxy_granting_tickets_on_ticket", unique: true, using: :btree
 
   create_table "casino_proxy_tickets", force: true do |t|
     t.string   "ticket",                                   null: false
@@ -45,8 +56,8 @@ ActiveRecord::Schema.define(version: 20140827184143) do
     t.datetime "updated_at"
   end
 
-  add_index "casino_proxy_tickets", ["proxy_granting_ticket_id"], name: "casino_proxy_tickets_on_pgt_id"
-  add_index "casino_proxy_tickets", ["ticket"], name: "index_casino_proxy_tickets_on_ticket", unique: true
+  add_index "casino_proxy_tickets", ["proxy_granting_ticket_id"], name: "casino_proxy_tickets_on_pgt_id", using: :btree
+  add_index "casino_proxy_tickets", ["ticket"], name: "index_casino_proxy_tickets_on_ticket", unique: true, using: :btree
 
   create_table "casino_service_rules", force: true do |t|
     t.boolean  "enabled",    default: true,  null: false
@@ -58,7 +69,7 @@ ActiveRecord::Schema.define(version: 20140827184143) do
     t.datetime "updated_at"
   end
 
-  add_index "casino_service_rules", ["url"], name: "index_casino_service_rules_on_url", unique: true
+  add_index "casino_service_rules", ["url"], name: "index_casino_service_rules_on_url", unique: true, using: :btree
 
   create_table "casino_service_tickets", force: true do |t|
     t.string   "ticket",                                    null: false
@@ -70,8 +81,8 @@ ActiveRecord::Schema.define(version: 20140827184143) do
     t.datetime "updated_at"
   end
 
-  add_index "casino_service_tickets", ["ticket"], name: "index_casino_service_tickets_on_ticket", unique: true
-  add_index "casino_service_tickets", ["ticket_granting_ticket_id"], name: "casino_service_tickets_on_tgt_id"
+  add_index "casino_service_tickets", ["ticket"], name: "index_casino_service_tickets_on_ticket", unique: true, using: :btree
+  add_index "casino_service_tickets", ["ticket_granting_ticket_id"], name: "casino_service_tickets_on_tgt_id", using: :btree
 
   create_table "casino_ticket_granting_tickets", force: true do |t|
     t.string   "ticket",                                             null: false
@@ -83,7 +94,7 @@ ActiveRecord::Schema.define(version: 20140827184143) do
     t.datetime "updated_at"
   end
 
-  add_index "casino_ticket_granting_tickets", ["ticket"], name: "index_casino_ticket_granting_tickets_on_ticket", unique: true
+  add_index "casino_ticket_granting_tickets", ["ticket"], name: "index_casino_ticket_granting_tickets_on_ticket", unique: true, using: :btree
 
   create_table "casino_two_factor_authenticators", force: true do |t|
     t.integer  "user_id",                    null: false
@@ -93,7 +104,7 @@ ActiveRecord::Schema.define(version: 20140827184143) do
     t.datetime "updated_at"
   end
 
-  add_index "casino_two_factor_authenticators", ["user_id"], name: "index_casino_two_factor_authenticators_on_user_id"
+  add_index "casino_two_factor_authenticators", ["user_id"], name: "index_casino_two_factor_authenticators_on_user_id", using: :btree
 
   create_table "casino_users", force: true do |t|
     t.string   "authenticator",    null: false
@@ -103,6 +114,6 @@ ActiveRecord::Schema.define(version: 20140827184143) do
     t.datetime "updated_at"
   end
 
-  add_index "casino_users", ["authenticator", "username"], name: "index_casino_users_on_authenticator_and_username", unique: true
+  add_index "casino_users", ["authenticator", "username"], name: "index_casino_users_on_authenticator_and_username", unique: true, using: :btree
 
 end
