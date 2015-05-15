@@ -10,9 +10,11 @@ group :assets do
   gem 'therubyracer'
 end
 
-gem 'casino'
-gem 'casino-ldap_authenticator'
-gem 'casino-activerecord_authenticator'
+gem 'casino', '4.0.0'
+gem 'casino-ldap_authenticator', '3.0.0'
+gem 'casino-activerecord_authenticator', '4.0.1'
+
+gem 'http_accept_language', '~> 2.0'
 
 gem 'whenever', :require => false
 
