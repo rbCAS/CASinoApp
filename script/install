@@ -17,7 +17,7 @@ cp -v config/cas.yml.example config/cas.yml
 
 if [ "$1" != 'sqlite' ]; then
   echo 'Please configure your database in config/database.yml and hit ENTER when I should continue...'
-  read
+  read varToStoreNothing
 fi
 
 bundle exec rake db:schema:load
