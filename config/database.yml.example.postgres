@@ -1,7 +1,0 @@
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: CASinoApp
-  pool: 5
-  username: CASinoApp
-  password:
