@@ -25,8 +25,6 @@ class ApplicationController < ActionController::Base
     if service.present?
       uri = URI(service)
       @referer = uri.host
-      # TODO: remove once productionized
-      @referer = nil if @referer == 'localhost' && uri.port == request.port
     end
   end
 

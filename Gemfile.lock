@@ -84,6 +84,8 @@ GEM
       sshkit (~> 1.2)
     capistrano-scm-copy (0.7.0)
       capistrano (~> 3.0)
+    capistrano3-nginx (2.1.4)
+      capistrano (>= 3.0.0)
     capistrano3-puma (1.2.1)
       capistrano (~> 3.0)
       puma (>= 2.6)
@@ -241,6 +243,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rvm
   capistrano-scm-copy
+  capistrano3-nginx
   capistrano3-puma
   casino
   casino-activerecord_authenticator!
