@@ -3,7 +3,7 @@ require 'http_accept_language'
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_action :set_locale
+  before_action :set_locale, :set_referer
 
   private
   def set_locale
@@ -19,4 +19,15 @@ class ApplicationController < ActionController::Base
   def http_accept_language
     HttpAcceptLanguage::Parser.new request.env['HTTP_ACCEPT_LANGUAGE']
   end
+
+  def set_referer
+    service = request.referer || params[:service]
+    if service.present?
+      uri = URI(service)
+      @referer = uri.host
+      # TODO: remove once productionized
+      @referer = nil if @referer == 'localhost' && uri.port == request.port
+    end
+  end
+
 end

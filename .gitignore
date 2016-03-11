@@ -24,3 +24,10 @@
 /config/deploy.rb
 /config/deploy/cas.yml
 /config/deploy/database.yml
+
+# Ignore RubyMine generated files
+.idea/*
+
+# Ignore ruby-version and ruby-gemset
+.ruby-version
+.ruby-gemset

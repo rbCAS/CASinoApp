@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= CASino.config.frontend[:sso_name] %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%- if @referer && CASinoApp::Application.assets.find_asset("#{@referer}.css").present? %>
+    <%= stylesheet_link_tag @referer, :media => "all" %>
+  <%- end %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
+  <%= favicon_link_tag 'logo.png', type: 'image/png', rel: 'logo' %>
+</head>
+<body>
+
+  <%= yield %>
+
+</body>
+</html>
