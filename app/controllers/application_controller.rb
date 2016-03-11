@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
     service = request.referer || params[:service]
     if service.present?
       uri = URI(service)
-      @referer = uri.host
+      @referer = uri.host.split('.').first
     end
   end
 
