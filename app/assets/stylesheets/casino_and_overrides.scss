@@ -1,10 +1,10 @@
 // Default CASino settings
 
-// $buttonColor: #0074ad;
+$buttonColor: #990000;
 // $buttonSecondaryColor: #c2c2c2;
-// $logo: "logo.png";
-// $logoRetina: "logo@2x.png";
-// $logoWidth: 146px;
-// $logoHeight: 34px;
+$logo: image-path("vin65.png");
+$logoRetina: image-path("vin65.png");
+$logoWidth: 146px;
+$logoHeight: 88px;
 
 @import 'casino';
