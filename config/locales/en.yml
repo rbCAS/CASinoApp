@@ -22,4 +22,4 @@
 en:
   hello: "Hello world"
   login:
-    label_username: "Email"
+    label_username: "Username"
