@@ -6,8 +6,7 @@ environment 'production'
 
 pidfile "/home/ec2-user/sso/shared/tmp/pids/puma.pid"
 state_path "/home/ec2-user/sso/shared/tmp/pids/puma.state"
-stdout_redirect '/home/ec2-user/sso/shared/log/puma_error.log', '/home/ec2-user/sso/shared/log/puma_access.log', true
-
+stdout_redirect '/home/ec2-user/sso/shared/log/puma_access.log', '/home/ec2-user/sso/shared/log/puma_error.log', true
 
 threads 0,8
 
