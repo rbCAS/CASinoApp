@@ -12,10 +12,10 @@ GIT
 
 GIT
   remote: https://github.com/ramanbuttar/CASino.git
-  revision: de67555e1a34b6f9191a5e441f51babcfa843050
+  revision: 1201786e9e378221429a725afd8aef0c68ccbe51
   branch: master
   specs:
-    casino (4.0.4)
+    casino (4.0.5)
       addressable (~> 2.3)
       faraday (~> 0.8)
       grape (~> 0.8)
