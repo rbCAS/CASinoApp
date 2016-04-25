@@ -13,7 +13,7 @@ gem 'activerecord-sqlserver-adapter', '~> 4.1.2'
 # Rails version is limited by activerecord-sqlserver-adapter gem because 4.1.2 is needed to talk to MS SQL Server 2008
 
 # CASino
-gem 'casino', git: 'https://github.com/ramanbuttar/CASino.git', branch: 'master'
+gem 'casino', git: 'https://github.com/Vin65/CASino.git', branch: 'master'
 gem 'casino-activerecord_authenticator', git: 'https://github.com/Vin65/casino-activerecord_authenticator.git', branch: 'master'
 
 # App
