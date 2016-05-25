@@ -33,14 +33,14 @@ group :development do
   gem 'casino-test_authenticator', git: 'https://github.com/ramanbuttar/casino-test_authenticator.git', branch: 'master'
 
   # Capistrano
-  gem 'capistrano',           require: false
-  gem 'capistrano-ext',       require: false
-  gem 'capistrano-rails',     require: false
-  gem 'capistrano-rvm',       require: false
-  gem 'capistrano3-puma',     require: false
-  gem 'capistrano3-nginx',     require: false
-  gem 'capistrano-bundler',   require: false
-  gem 'capistrano-scm-copy',  require: false
+  gem 'capistrano',             require: false
+  gem 'capistrano-ext',         require: false
+  gem 'capistrano-rails',       require: false
+  gem 'capistrano-rvm',         require: false
+  gem 'capistrano3-puma',       require: false
+  gem 'capistrano3-nginx',      require: false
+  gem 'capistrano-bundler',     require: false
+  gem 'capistrano-scm-copy',    require: false
 
   gem 'awesome_print', require: 'ap'
   gem 'quiet_assets'

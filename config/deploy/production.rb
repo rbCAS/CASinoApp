@@ -12,6 +12,7 @@ server '10.5.4.86', user: 'ec2-user', roles: %w{web app db}, primary: true
 
 set :stage, :production
 set :branch, :master
+set :rails_env, :production
 
 # In use by gem 'capistrano-scm-copy' for deploying with local files
 set :exclude_dir, ['tmp', 'vendor']
