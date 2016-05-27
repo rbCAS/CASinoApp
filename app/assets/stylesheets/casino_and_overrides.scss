@@ -8,19 +8,11 @@ $logoHeight: 88px;
 
 @import 'casino';
 
-body {
-  background-color: #252524;
-}
-
 *,
 *:before,
 *:after {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
-}
-
-.box, .button, input[type=text], input[type=password] {
-  border-radius: 5px;
 }
 
 .button {
@@ -44,12 +36,3 @@ body {
     }
   }
 }
-
-#flash_error {
-  background-color: #f5cf47;
-  border-left: 5px solid #cba10b;
-  color: #000;
-  height: 40px;
-  line-height: 40px;
-}
-
