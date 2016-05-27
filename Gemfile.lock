@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Vin65/CASino.git
-  revision: 200e5c2c23119b27ed43e5ca3e46aedb2bd417e9
+  revision: 7f5d849091a3dbe3a1f8e082221714a8d475a839
   branch: master
   specs:
     casino (4.0.7)
@@ -17,10 +17,10 @@ GIT
 
 GIT
   remote: https://github.com/Vin65/casino-activerecord_authenticator.git
-  revision: af716efae691fa949f9144690063e5d6ddeea048
+  revision: aa9170aa1cf24489b2f3bb55374703085bce0b69
   branch: master
   specs:
-    casino-activerecord_authenticator (4.1)
+    casino-activerecord_authenticator (4.2)
       activerecord (>= 4.1.0, < 4.3.0)
       bcrypt (~> 3.0)
       casino (>= 3.0.0, < 5.0.0)
@@ -146,8 +146,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     mini_portile (0.6.2)
-    minitest (5.8.4)
-    multi_json (1.11.2)
+    minitest (5.9.0)
+    multi_json (1.12.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mustermann19 (0.4.3)
