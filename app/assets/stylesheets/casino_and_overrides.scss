@@ -3,8 +3,8 @@
 //$buttonSecondaryColor: #BCBCBD;
 $logo: image-path("vin65.png");
 $logoRetina: image-path("vin65.png");
-$logoWidth: 200px;
-$logoHeight: 88px;
+$logoWidth: 180px;
+$logoHeight: 100px;
 
 @import 'casino';
 
@@ -33,6 +33,7 @@ $logoHeight: 88px;
   @media only screen and (max-width: 600px)  {
     .logo {
       height: 100px;
+      background-position: 50%;
     }
   }
 }
