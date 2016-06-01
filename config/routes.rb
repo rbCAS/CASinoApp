@@ -1,6 +1,8 @@
 CASinoApp::Application.routes.draw do
   mount CASino::Engine => '/', :as => 'CASino'
 
+  get '/healthcheck' => 'application#healthcheck'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

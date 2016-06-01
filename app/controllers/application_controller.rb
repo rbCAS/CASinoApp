@@ -3,7 +3,15 @@ require 'http_accept_language'
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_action :set_locale, :set_referer
+  before_action :set_locale, :set_referer, except: :healthcheck
+
+  def healthcheck
+    if ActiveRecord::SchemaMigration.first.present?
+      head :ok
+    else
+      head :internal_server_error
+    end
+  end
 
   private
   def set_locale

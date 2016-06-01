@@ -71,8 +71,6 @@ GEM
     addressable (2.4.0)
     arel (5.0.1.20140414130214)
     awesome_print (1.6.1)
-    aws-healthcheck (1.0.1)
-      rails (>= 3.0)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -240,7 +238,6 @@ DEPENDENCIES
   activerecord (= 4.1.2)
   activerecord-sqlserver-adapter (~> 4.1.2)
   awesome_print
-  aws-healthcheck
   better_errors
   byebug
   capistrano

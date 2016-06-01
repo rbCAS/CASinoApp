@@ -20,9 +20,6 @@ gem 'casino-activerecord_authenticator', git: 'https://github.com/Vin65/casino-a
 gem 'http_accept_language', '~> 2.0'
 gem 'whenever', require: false # Cron Jobs
 
-# AWS
-gem 'aws-healthcheck'
-
 group :assets do
   gem 'sass-rails', '~> 4.0.3'
   gem 'uglifier', '>= 1.0.3'
