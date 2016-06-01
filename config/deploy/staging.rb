@@ -4,6 +4,7 @@
 # You can define all roles on a single server, or split them:
 
 server '10.5.3.127', user: 'ec2-user', roles: %w{web app db}, primary: true
+server '10.5.4.196', user: 'ec2-user', roles: %w{web app db}, primary: true
 
 set :stage, :staging
 set :branch, :master
