@@ -1,13 +1,14 @@
 GIT
   remote: https://github.com/Vin65/CASino.git
-  revision: 7f5d849091a3dbe3a1f8e082221714a8d475a839
+  revision: c0b6a1bf19ff9b1d23f50079295a643d8c6cd18d
   branch: master
   specs:
-    casino (4.0.7)
+    casino (4.1.0)
       addressable (~> 2.3)
       faraday (~> 0.8)
       grape (~> 0.8)
       grape-entity (~> 0.4)
+      paranoia (~> 2.0)
       rails (>= 4.1.0, < 4.3.0)
       rotp (~> 2.0)
       rqrcode_png (~> 0.1)
@@ -154,6 +155,8 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.1.1)
+    paranoia (2.1.5)
+      activerecord (~> 4.0)
     phpass-ruby (0.1.2)
     polyglot (0.3.5)
     puma (3.4.0)
@@ -205,7 +208,7 @@ GEM
     sshkit (1.9.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    terminal-table (1.5.2)
+    terminal-table (1.6.0)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
