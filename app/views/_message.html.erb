@@ -1,0 +1,7 @@
+<%- message = t(:text, scope: :message, default: '') -%>
+<%- unless message.blank? -%>
+    <div class="message box">
+      <%- link = link_to t(:link_text, scope: :message), t(:link, scope: :message), target: :_blank -%>
+      <%= t(:text, scope: :message, href: link).html_safe %>
+    </div>
+<%- end -%>

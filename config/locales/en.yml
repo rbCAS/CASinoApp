@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   login:
     label_username: "Username"
+  message:
+    text: Visit %{href} for more details about SSO at Vin65
+    link: https://community.vin65.com/t/vin65-sso-the-new-login-screen/461
+    link_text: community.vin65.com

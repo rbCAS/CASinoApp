@@ -26,6 +26,8 @@ $logoHeight: 100px;
 }
 
 .login.box {
+    margin-top: 3%; // if message present
+
     button {
       width: 100%;
     }
@@ -36,4 +38,9 @@ $logoHeight: 100px;
       background-position: 50%;
     }
   }
+}
+
+.message.box {
+  margin-top: 1%;
+  text-align: center;
 }
