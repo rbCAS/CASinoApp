@@ -14,6 +14,7 @@
 /log/*.log
 /tmp
 
+# Ignore configuration files with passwords
 /config/database.yml
 /config/cas.yml
 
@@ -21,6 +22,10 @@
 /public/assets
 
 /config/deployment-config.yml
-/config/deploy.rb
-/config/deploy/cas.yml
-/config/deploy/database.yml
+
+# Ignore RubyMine generated files
+.idea/*
+
+# Ignore ruby-version and ruby-gemset
+.ruby-version
+.ruby-gemset

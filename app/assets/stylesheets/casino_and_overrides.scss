@@ -1,12 +1,46 @@
-
 // Default CASino settings
 
-// $buttonColor: #0074ad;
-// $buttonSecondaryColor: #c2c2c2;
-// $logo: "logo.png";
-// $logoRetina: "logo@2x.png";
-// $logoWidth: 146px;
-// $logoHeight: 34px;
-
+//$buttonSecondaryColor: #BCBCBD;
+$logo: image-path("vin65.png");
+$logoRetina: image-path("vin65.png");
+$logoWidth: 180px;
+$logoHeight: 100px;
 
 @import 'casino';
+
+*,
+*:before,
+*:after {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button {
+  background: #88ba60;
+  border: 1px solid rgba(0,0,0,.2);
+
+  &:hover {
+    background-color: #73a849;
+    border-color: #5d883b;
+  }
+}
+
+.login.box {
+    margin-top: 3%; // if message present
+
+    button {
+      width: 100%;
+    }
+
+  @media only screen and (max-width: 600px)  {
+    .logo {
+      height: 100px;
+      background-position: 50%;
+    }
+  }
+}
+
+.message.box {
+  margin-top: 1%;
+  text-align: center;
+}
