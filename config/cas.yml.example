@@ -1,4 +1,5 @@
 production:
+  # interrupt_url: https://pwm.domain.com/pwm/private/CommandServlet?processAction=checkAll&forwardURL=
   frontend:
     sso_name: 'CASino'
     footer_text: 'Powered by <a href="http://rbcas.com/">CASino</a>'
@@ -14,6 +15,7 @@ production:
 #        port: 636
 #        base: 'ou=people,dc=example,dc=com'
 #        username_attribute: 'uid'
+#        username_suffix: '@domain.com'
 #        encryption: 'simple_tls'
 #        extra_attributes:
 #          email: 'mail'
