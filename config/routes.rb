@@ -1,4 +1,5 @@
 CASinoApp::Application.routes.draw do
+  mount CASino::Engine => '/', :as => 'casino'
   mount CASino::Engine => '/', :as => 'CASino'
 
   # The priority is based upon order of creation:

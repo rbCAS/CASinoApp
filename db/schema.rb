@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160201044838) do
+ActiveRecord::Schema.define(version: 20170722204556) do
 
-  create_table "casino_auth_token_tickets", force: true do |t|
+  create_table "casino_auth_token_tickets", force: :cascade do |t|
     t.string   "ticket",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -21,7 +21,16 @@ ActiveRecord::Schema.define(version: 20160201044838) do
 
   add_index "casino_auth_token_tickets", ["ticket"], name: "index_casino_auth_token_tickets_on_ticket", unique: true
 
-  create_table "casino_login_tickets", force: true do |t|
+  create_table "casino_login_attempts", force: :cascade do |t|
+    t.integer  "user_id",                    null: false
+    t.boolean  "successful", default: false
+    t.string   "user_ip"
+    t.text     "user_agent"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "casino_login_tickets", force: :cascade do |t|
     t.string   "ticket",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -29,7 +38,7 @@ ActiveRecord::Schema.define(version: 20160201044838) do
 
   add_index "casino_login_tickets", ["ticket"], name: "index_casino_login_tickets_on_ticket", unique: true
 
-  create_table "casino_proxy_granting_tickets", force: true do |t|
+  create_table "casino_proxy_granting_tickets", force: :cascade do |t|
     t.string   "ticket",       null: false
     t.string   "iou",          null: false
     t.integer  "granter_id",   null: false
@@ -44,7 +53,7 @@ ActiveRecord::Schema.define(version: 20160201044838) do
   add_index "casino_proxy_granting_tickets", ["iou"], name: "index_casino_proxy_granting_tickets_on_iou", unique: true
   add_index "casino_proxy_granting_tickets", ["ticket"], name: "index_casino_proxy_granting_tickets_on_ticket", unique: true
 
-  create_table "casino_proxy_tickets", force: true do |t|
+  create_table "casino_proxy_tickets", force: :cascade do |t|
     t.string   "ticket",                                   null: false
     t.text     "service",                                  null: false
     t.boolean  "consumed",                 default: false, null: false
@@ -56,7 +65,7 @@ ActiveRecord::Schema.define(version: 20160201044838) do
   add_index "casino_proxy_tickets", ["proxy_granting_ticket_id"], name: "casino_proxy_tickets_on_pgt_id"
   add_index "casino_proxy_tickets", ["ticket"], name: "index_casino_proxy_tickets_on_ticket", unique: true
 
-  create_table "casino_service_rules", force: true do |t|
+  create_table "casino_service_rules", force: :cascade do |t|
     t.boolean  "enabled",    default: true,  null: false
     t.integer  "order",      default: 10,    null: false
     t.string   "name",                       null: false
@@ -68,7 +77,7 @@ ActiveRecord::Schema.define(version: 20160201044838) do
 
   add_index "casino_service_rules", ["url"], name: "index_casino_service_rules_on_url", unique: true
 
-  create_table "casino_service_tickets", force: true do |t|
+  create_table "casino_service_tickets", force: :cascade do |t|
     t.string   "ticket",                                    null: false
     t.text     "service",                                   null: false
     t.integer  "ticket_granting_ticket_id"
@@ -81,7 +90,7 @@ ActiveRecord::Schema.define(version: 20160201044838) do
   add_index "casino_service_tickets", ["ticket"], name: "index_casino_service_tickets_on_ticket", unique: true
   add_index "casino_service_tickets", ["ticket_granting_ticket_id"], name: "casino_service_tickets_on_tgt_id"
 
-  create_table "casino_ticket_granting_tickets", force: true do |t|
+  create_table "casino_ticket_granting_tickets", force: :cascade do |t|
     t.string   "ticket",                                             null: false
     t.text     "user_agent"
     t.integer  "user_id",                                            null: false
@@ -94,7 +103,7 @@ ActiveRecord::Schema.define(version: 20160201044838) do
 
   add_index "casino_ticket_granting_tickets", ["ticket"], name: "index_casino_ticket_granting_tickets_on_ticket", unique: true
 
-  create_table "casino_two_factor_authenticators", force: true do |t|
+  create_table "casino_two_factor_authenticators", force: :cascade do |t|
     t.integer  "user_id",                    null: false
     t.string   "secret",                     null: false
     t.boolean  "active",     default: false, null: false
@@ -104,7 +113,7 @@ ActiveRecord::Schema.define(version: 20160201044838) do
 
   add_index "casino_two_factor_authenticators", ["user_id"], name: "index_casino_two_factor_authenticators_on_user_id"
 
-  create_table "casino_users", force: true do |t|
+  create_table "casino_users", force: :cascade do |t|
     t.string   "authenticator",    null: false
     t.string   "username",         null: false
     t.text     "extra_attributes"
